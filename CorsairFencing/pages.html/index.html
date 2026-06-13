@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Фехтовален клуб „Корсар"</title>
+  <meta name="description" content="Фехтовален клуб Корсар — прецизност, дисциплина, победа. Присъединете се към нас." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="korsar">
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav-logo">КОРСАР</a>
+
+    <!-- Settings panel (language + theme) -->
+    <div class="nav-settings" id="navSettings">
+
+      <!-- Language toggle -->
+      <div class="lang-toggle" id="langToggle" aria-label="Language">
+        <button class="lang-btn active" data-lang="bg">БГ</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+
+      <!-- Theme switcher -->
+      <div class="theme-switcher" id="themeSwitcher">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Change colour theme" aria-expanded="false">
+          <span class="theme-dot" id="themeIndicator"></span>
+          <svg viewBox="0 0 16 16" fill="currentColor" width="10" height="10"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm0 14A6 6 0 1 1 8 2a6 6 0 0 1 0 12z"/><path d="M8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg>
+        </button>
+        <div class="theme-panel" id="themePanel">
+          <p class="theme-panel-label" data-i18n="themeLabel">Colour way</p>
+          <div class="theme-options">
+            <button class="theme-opt active" data-theme="korsar" title="Korsar — Navy & Gold">
+              <span class="theme-swatch" style="background: linear-gradient(135deg,#0B0E1A 50%,#C9A84C 50%)"></span>
+              <span data-i18n="themeKorsar">Korsar</span>
+            </button>
+            <button class="theme-opt" data-theme="parchment" title="Parchment — Warm Light">
+              <span class="theme-swatch" style="background: linear-gradient(135deg,#F5EFE4 50%,#6B1A2A 50%)"></span>
+              <span data-i18n="themeParchment">Parchment</span>
+            </button>
+            <button class="theme-opt" data-theme="steel" title="Steel — Dark & Cyan">
+              <span class="theme-swatch" style="background: linear-gradient(135deg,#0D0F14 50%,#00C8C8 50%)"></span>
+              <span data-i18n="themeSteel">Steel</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" data-i18n="navAbout">За нас</a></li>
+      <li><a href="#disciplines" data-i18n="navDisciplines">Дисциплини</a></li>
+      <li><a href="#coaches" data-i18n="navCoaches">Треньори</a></li>
+      <li><a href="#schedule" data-i18n="navSchedule">Програма</a></li>
+      <li><a href="#gallery" data-i18n="navGallery">Галерия</a></li>
+      <li><a href="#contact" class="nav-cta" data-i18n="navJoin">Запишете се</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+    </div>
+    <div class="blade-container" aria-hidden="true">
+      <div class="blade"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-i18n="heroEyebrow">Фехтовален клуб · Основан 1994</p>
+      <h1 class="hero-title">
+        <span class="hero-line hero-line-1">КОР</span><span class="hero-line hero-line-2">САР</span>
+      </h1>
+      <p class="hero-sub" data-i18n="heroSub">Острие. Движение. Победа.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary" data-i18n="heroJoin">Запишете се</a>
+        <a href="#about" class="btn-ghost" data-i18n="heroLearn">Научете повече</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">30+</span>
+        <span class="stat-label" data-i18n="stat1">Години опит</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">150+</span>
+        <span class="stat-label" data-i18n="stat2">Активни спортисти</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">80+</span>
+        <span class="stat-label" data-i18n="stat3">Медала</span>
+      </div>
+    </div>
+    <a href="#about" class="scroll-hint" aria-label="Scroll down">
+      <span class="scroll-line"></span>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-image-frame">
+            <div class="about-image-placeholder">
+              <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="500" fill="var(--navy-2,#131726)"/>
+                <g fill="var(--gold,#C9A84C)" opacity="0.6">
+                  <circle cx="200" cy="80" r="30"/>
+                  <ellipse cx="200" cy="85" rx="25" ry="20" fill="var(--navy,#0B0E1A)" stroke="var(--gold,#C9A84C)" stroke-width="2"/>
+                  <path d="M200 110 L170 200 L140 290" stroke="var(--steel,#C8CDD6)" stroke-width="3" fill="none"/>
+                  <path d="M200 110 L230 200 L260 280" stroke="var(--steel,#C8CDD6)" stroke-width="3" fill="none"/>
+                  <path d="M185 140 L120 180 L60 200" stroke="var(--gold,#C9A84C)" stroke-width="3" fill="none"/>
+                  <path d="M60 200 L10 215" stroke="var(--steel,#C8CDD6)" stroke-width="2"/>
+                  <path d="M215 140 L240 120" stroke="var(--steel,#C8CDD6)" stroke-width="3" fill="none"/>
+                  <ellipse cx="135" cy="295" rx="15" ry="6"/>
+                  <ellipse cx="265" cy="285" rx="15" ry="6"/>
+                </g>
+                <line x1="0" y1="400" x2="400" y2="350" stroke="var(--gold,#C9A84C)" stroke-width="0.5" opacity="0.3"/>
+                <line x1="0" y1="420" x2="400" y2="370" stroke="var(--gold,#C9A84C)" stroke-width="0.5" opacity="0.2"/>
+                <text x="200" y="470" text-anchor="middle" fill="var(--gold,#C9A84C)" opacity="0.4" font-family="'Bebas Neue', sans-serif" font-size="18">КОРСАР</text>
+              </svg>
+            </div>
+            <div class="about-badge">
+              <span class="badge-year">1994</span>
+              <span class="badge-text" data-i18n="badgeFounded">Основан</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-text">
+          <p class="section-eyebrow" data-i18n="aboutEyebrow">За клуба</p>
+          <h2 class="section-title" data-i18n="aboutTitle">Традиция на<br/><em>Острието</em></h2>
+          <p class="body-text" data-i18n="aboutP1">Фехтовален клуб „Корсар" е роден в България с единствена цел: да формира фехтовачи, а не просто спортисти. От 1994 г. насам отглеждаме поколения от дисциплинирани, смели и прецизни бойци.</p>
+          <p class="body-text" data-i18n="aboutP2">Нашите ценности са прости — работа, точност и уважение. Независимо дали сте начинаещ или опитен спортист, при нас ще намерите среда, която ви тласка напред.</p>
+          <div class="about-pillars">
+            <div class="pillar">
+              <span class="pillar-icon">⚔</span>
+              <span class="pillar-label" data-i18n="pillar1">Техника</span>
+            </div>
+            <div class="pillar">
+              <span class="pillar-icon">🧠</span>
+              <span class="pillar-label" data-i18n="pillar2">Тактика</span>
+            </div>
+            <div class="pillar">
+              <span class="pillar-icon">💪</span>
+              <span class="pillar-label" data-i18n="pillar3">Характер</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISCIPLINES -->
+  <section class="disciplines" id="disciplines">
+    <div class="container">
+      <div class="section-header center">
+        <p class="section-eyebrow" data-i18n="discEyebrow">Какво преподаваме</p>
+        <h2 class="section-title" data-i18n="discTitle">Три <em>Оръжия</em></h2>
+      </div>
+      <div class="disciplines-grid">
+
+        <div class="discipline-card" data-weapon="foil">
+          <div class="discipline-num">01</div>
+          <div class="discipline-icon">
+            <svg viewBox="0 0 60 120" xmlns="http://www.w3.org/2000/svg">
+              <line x1="30" y1="5" x2="30" y2="85" stroke="var(--gold,#C9A84C)" stroke-width="2"/>
+              <rect x="15" y="85" width="30" height="6" rx="2" fill="var(--steel,#C8CDD6)"/>
+              <rect x="22" y="91" width="16" height="22" rx="3" fill="var(--steel,#C8CDD6)"/>
+            </svg>
+          </div>
+          <h3 class="discipline-name" data-i18n="foilName">Флорет</h3>
+          <p class="discipline-desc" data-i18n="foilDesc">Лекото оръжие на прецизността. Флоретът изисква максимална точност и бързина — идеален старт за новите фехтовачи.</p>
+          <ul class="discipline-facts">
+            <li data-i18n="foilF1">Само убождане с върха</li>
+            <li data-i18n="foilF2">Поразяване само на тялото</li>
+            <li data-i18n="foilF3">Право на атака</li>
+          </ul>
+        </div>
+
+        <div class="discipline-card featured" data-weapon="epee">
+          <div class="discipline-num">02</div>
+          <div class="discipline-icon">
+            <svg viewBox="0 0 60 120" xmlns="http://www.w3.org/2000/svg">
+              <line x1="30" y1="5" x2="30" y2="80" stroke="var(--gold,#C9A84C)" stroke-width="3"/>
+              <circle cx="30" cy="82" r="12" fill="none" stroke="var(--steel,#C8CDD6)" stroke-width="2"/>
+              <rect x="24" y="94" width="12" height="20" rx="3" fill="var(--steel,#C8CDD6)"/>
+            </svg>
+          </div>
+          <h3 class="discipline-name" data-i18n="epeeName">Шпага</h3>
+          <p class="discipline-desc" data-i18n="epeeDesc">Дуелното оръжие. При шпагата цялото тяло е мишена — тук се крие истинската стратегия и психологическата игра.</p>
+          <ul class="discipline-facts">
+            <li data-i18n="epeeF1">Цялото тяло е мишена</li>
+            <li data-i18n="epeeF2">Няма право на атака</li>
+            <li data-i18n="epeeF3">Двоен удар е възможен</li>
+          </ul>
+          <div class="featured-tag" data-i18n="featuredTag">Популярен избор</div>
+        </div>
+
+        <div class="discipline-card" data-weapon="sabre">
+          <div class="discipline-num">03</div>
+          <div class="discipline-icon">
+            <svg viewBox="0 0 60 120" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 5 Q38 40 30 80" stroke="var(--gold,#C9A84C)" stroke-width="3" fill="none"/>
+              <path d="M20 82 Q30 78 40 82" stroke="var(--steel,#C8CDD6)" stroke-width="2" fill="none"/>
+              <path d="M18 82 Q15 70 20 82" stroke="var(--steel,#C8CDD6)" stroke-width="2" fill="none"/>
+              <rect x="24" y="82" width="12" height="22" rx="3" fill="var(--steel,#C8CDD6)"/>
+            </svg>
+          </div>
+          <h3 class="discipline-name" data-i18n="sabreName">Сабя</h3>
+          <p class="discipline-desc" data-i18n="sabreDesc">Бързото кавалерийско оръжие. Сабята е оръжието на скоростта — рязане, убождане, атака на горната половина на тялото.</p>
+          <ul class="discipline-facts">
+            <li data-i18n="sabreF1">Рязане и убождане</li>
+            <li data-i18n="sabreF2">Горна половина на тялото</li>
+            <li data-i18n="sabreF3">Изключително динамична</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COACHES -->
+  <section class="coaches" id="coaches">
+    <div class="container">
+      <div class="section-header center">
+        <p class="section-eyebrow" data-i18n="coachEyebrow">Нашият екип</p>
+        <h2 class="section-title" data-i18n="coachTitle">Хората зад <em>Острието</em></h2>
+      </div>
+      <div class="coaches-grid">
+
+        <div class="coach-card">
+          <div class="coach-photo">
+            <div class="coach-photo-placeholder">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="200" fill="var(--navy-2,#131726)"/>
+                <circle cx="100" cy="75" r="40" fill="var(--navy-3,#1E2438)"/>
+                <ellipse cx="100" cy="180" rx="65" ry="45" fill="var(--navy-3,#1E2438)"/>
+              </svg>
+            </div>
+          </div>
+          <div class="coach-info">
+            <h3 class="coach-name">Иван Петров</h3>
+            <p class="coach-title" data-i18n="coach1Title">Главен треньор · Шпага</p>
+            <p class="coach-bio" data-i18n="coach1Bio">Многократен национален шампион и бивш участник в европейски първенства. Треньорски стаж: 18 години.</p>
+            <div class="coach-medals">
+              <span class="medal gold">🥇 ×3</span>
+              <span class="medal silver">🥈 ×5</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="coach-card">
+          <div class="coach-photo">
+            <div class="coach-photo-placeholder">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="200" fill="var(--navy-2,#131726)"/>
+                <circle cx="100" cy="75" r="40" fill="var(--navy-3,#1E2438)"/>
+                <ellipse cx="100" cy="180" rx="65" ry="45" fill="var(--navy-3,#1E2438)"/>
+              </svg>
+            </div>
+          </div>
+          <div class="coach-info">
+            <h3 class="coach-name">Мария Колева</h3>
+            <p class="coach-title" data-i18n="coach2Title">Треньор · Флорет</p>
+            <p class="coach-bio" data-i18n="coach2Bio">Специалист по техника и тактика при младежи. Работи с деца от 7 години нагоре, развивайки основите на флорета.</p>
+            <div class="coach-medals">
+              <span class="medal gold">🥇 ×2</span>
+              <span class="medal bronze">🥉 ×4</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="coach-card">
+          <div class="coach-photo">
+            <div class="coach-photo-placeholder">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="200" fill="var(--navy-2,#131726)"/>
+                <circle cx="100" cy="75" r="40" fill="var(--navy-3,#1E2438)"/>
+                <ellipse cx="100" cy="180" rx="65" ry="45" fill="var(--navy-3,#1E2438)"/>
+              </svg>
+            </div>
+          </div>
+          <div class="coach-info">
+            <h3 class="coach-name">Георги Стоянов</h3>
+            <p class="coach-title" data-i18n="coach3Title">Треньор · Сабя</p>
+            <p class="coach-bio" data-i18n="coach3Bio">Бивш военен офицер и мастер по сабя. Внася дисциплина и стратегическо мислене в тренировките за напреднали.</p>
+            <div class="coach-medals">
+              <span class="medal silver">🥈 ×3</span>
+              <span class="medal bronze">🥉 ×6</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHEDULE -->
+  <section class="schedule" id="schedule">
+    <div class="container">
+      <div class="section-header center">
+        <p class="section-eyebrow" data-i18n="schedEyebrow">Тренировъчна програма</p>
+        <h2 class="section-title" data-i18n="schedTitle">Намерете <em>вашето</em> място</h2>
+      </div>
+
+      <div class="schedule-tabs">
+        <button class="tab-btn active" data-tab="beginners" data-i18n="tabBeginners">Начинаещи</button>
+        <button class="tab-btn" data-tab="intermediate" data-i18n="tabIntermediate">Напреднали</button>
+        <button class="tab-btn" data-tab="youth" data-i18n="tabYouth">Младежи</button>
+        <button class="tab-btn" data-tab="elite" data-i18n="tabElite">Елит</button>
+      </div>
+
+      <div class="schedule-tables">
+        <div class="schedule-table active" id="tab-beginners">
+          <div class="schedule-note" data-i18n="noteBeginners">За хора без предишен опит · Препоръчителна възраст: 14+</div>
+          <table>
+            <thead><tr>
+              <th data-i18n="thDay">Ден</th>
+              <th data-i18n="thTime">Час</th>
+              <th data-i18n="thHall">Зала</th>
+              <th data-i18n="thCoach">Треньор</th>
+            </tr></thead>
+            <tbody>
+              <tr><td data-i18n="mon">Понеделник</td><td>18:00 – 19:30</td><td data-i18n="hallA">Зала А</td><td>М. Колева</td></tr>
+              <tr><td data-i18n="wed">Сряда</td><td>18:00 – 19:30</td><td data-i18n="hallA">Зала А</td><td>М. Колева</td></tr>
+              <tr><td data-i18n="sat">Събота</td><td>10:00 – 12:00</td><td data-i18n="hallB">Зала Б</td><td>И. Петров</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="schedule-table" id="tab-intermediate">
+          <div class="schedule-note" data-i18n="noteIntermediate">За спортисти с поне 1 година опит · Всички оръжия</div>
+          <table>
+            <thead><tr>
+              <th data-i18n="thDay">Ден</th><th data-i18n="thTime">Час</th><th data-i18n="thHall">Зала</th><th data-i18n="thCoach">Треньор</th>
+            </tr></thead>
+            <tbody>
+              <tr><td data-i18n="tue">Вторник</td><td>19:00 – 21:00</td><td data-i18n="hallA">Зала А</td><td>И. Петров</td></tr>
+              <tr><td data-i18n="thu">Четвъртък</td><td>19:00 – 21:00</td><td data-i18n="hallA">Зала А</td><td>Г. Стоянов</td></tr>
+              <tr><td data-i18n="sat">Събота</td><td>13:00 – 15:00</td><td data-i18n="hallA">Зала А</td><td>И. Петров</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="schedule-table" id="tab-youth">
+          <div class="schedule-note" data-i18n="noteYouth">За деца от 7 до 14 години · Флорет и Шпага</div>
+          <table>
+            <thead><tr>
+              <th data-i18n="thDay">Ден</th><th data-i18n="thTime">Час</th><th data-i18n="thHall">Зала</th><th data-i18n="thCoach">Треньор</th>
+            </tr></thead>
+            <tbody>
+              <tr><td data-i18n="mon">Понеделник</td><td>16:30 – 18:00</td><td data-i18n="hallB">Зала Б</td><td>М. Колева</td></tr>
+              <tr><td data-i18n="wed">Сряда</td><td>16:30 – 18:00</td><td data-i18n="hallB">Зала Б</td><td>М. Колева</td></tr>
+              <tr><td data-i18n="fri">Петък</td><td>16:30 – 18:00</td><td data-i18n="hallB">Зала Б</td><td>М. Колева</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="schedule-table" id="tab-elite">
+          <div class="schedule-note" data-i18n="noteElite">Само по покана · Национален и международен резерв</div>
+          <table>
+            <thead><tr>
+              <th data-i18n="thDay">Ден</th><th data-i18n="thTime">Час</th><th data-i18n="thHall">Зала</th><th data-i18n="thCoach">Треньор</th>
+            </tr></thead>
+            <tbody>
+              <tr><td data-i18n="tue">Вторник</td><td>07:00 – 09:00</td><td data-i18n="hallA">Зала А</td><td>И. Петров</td></tr>
+              <tr><td data-i18n="thu">Четвъртък</td><td>07:00 – 09:00</td><td data-i18n="hallA">Зала А</td><td>И. Петров</td></tr>
+              <tr><td data-i18n="sun">Неделя</td><td>09:00 – 12:00</td><td data-i18n="hallAB">Зала А + Б</td><td data-i18n="allCoaches">Целият екип</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-header center">
+        <p class="section-eyebrow" data-i18n="galleryEyebrow">В действие</p>
+        <h2 class="section-title" data-i18n="galleryTitle">Галерия</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item tall">
+          <div class="gallery-placeholder">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="400" fill="var(--navy-2,#131726)"/><text x="150" y="200" text-anchor="middle" fill="var(--gold,#C9A84C)" opacity="0.4" font-family="'Bebas Neue'" font-size="22">PHOTO 1</text><line x1="50" y1="180" x2="250" y2="220" stroke="var(--gold,#C9A84C)" stroke-width="0.5" opacity="0.3"/></svg>
+          </div>
+          <div class="gallery-overlay"><span data-i18n="gal1">Финал — Национален шампионат 2024</span></div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">
+            <svg viewBox="0 0 300 250" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="250" fill="var(--navy-3,#1E2438)"/><text x="150" y="125" text-anchor="middle" fill="var(--gold,#C9A84C)" opacity="0.4" font-family="'Bebas Neue'" font-size="22">PHOTO 2</text></svg>
+          </div>
+          <div class="gallery-overlay"><span data-i18n="gal2">Младежки турнир</span></div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">
+            <svg viewBox="0 0 300 250" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="250" fill="var(--navy,#0B0E1A)"/><text x="150" y="125" text-anchor="middle" fill="var(--gold,#C9A84C)" opacity="0.4" font-family="'Bebas Neue'" font-size="22">PHOTO 3</text></svg>
+          </div>
+          <div class="gallery-overlay"><span data-i18n="gal3">Тренировка — Зала А</span></div>
+        </div>
+        <div class="gallery-item wide">
+          <div class="gallery-placeholder">
+            <svg viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg"><rect width="600" height="250" fill="var(--navy-2,#131726)"/><text x="300" y="125" text-anchor="middle" fill="var(--gold,#C9A84C)" opacity="0.4" font-family="'Bebas Neue'" font-size="22">PHOTO 4 — WIDE</text></svg>
+          </div>
+          <div class="gallery-overlay"><span data-i18n="gal4">Отборна снимка — Европейска купа 2023</span></div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">
+            <svg viewBox="0 0 300 250" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="250" fill="var(--navy-3,#1E2438)"/><text x="150" y="125" text-anchor="middle" fill="var(--gold,#C9A84C)" opacity="0.4" font-family="'Bebas Neue'" font-size="22">PHOTO 5</text></svg>
+          </div>
+          <div class="gallery-overlay"><span data-i18n="gal5">Награждаване</span></div>
+        </div>
+      </div>
+      <p class="gallery-note" data-i18n="galleryNote">📷 Снимките по-горе са заместители — заменете ги с вашите снимки в папката <code>images/</code></p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="section-eyebrow" data-i18n="contactEyebrow">Свържете се с нас</p>
+          <h2 class="section-title" data-i18n="contactTitle">Готови ли сте<br/>да вземете <em>позиция?</em></h2>
+          <p class="body-text" data-i18n="contactIntro">Записването е лесно. Попълнете формата и нашият екип ще се свърже с вас в рамките на 24 часа, за да уговорим безплатна пробна тренировка.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              <div>
+                <strong data-i18n="cAddress">Адрес</strong>
+                <p>ул. „Спортна" 14, София 1000</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📞</span>
+              <div>
+                <strong data-i18n="cPhone">Телефон</strong>
+                <p><a href="tel:+359888000000">+359 888 000 000</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">✉️</span>
+              <div>
+                <strong data-i18n="cEmail">Имейл</strong>
+                <p><a href="mailto:info@korsar-fencing.bg">info@korsar-fencing.bg</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">🕐</span>
+              <div>
+                <strong data-i18n="cHours">Работно време</strong>
+                <p data-i18n="cHoursVal">Пон–Пет: 16:00 – 21:00<br/>Съб–Нед: 09:00 – 15:00</p>
+              </div>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--navy,#0B0E1A)"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname" data-i18n="fName">Вашето име</label>
+                <input type="text" id="fname" name="name" data-i18n-placeholder="fNamePh" placeholder="Иван Иванов" required />
+              </div>
+              <div class="form-group">
+                <label for="fage" data-i18n="fAge">Възраст</label>
+                <input type="number" id="fage" name="age" placeholder="25" min="5" max="80" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="femail" data-i18n="fEmail">Имейл адрес</label>
+              <input type="email" id="femail" name="email" placeholder="ivan@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="fphone" data-i18n="fPhone">Телефон (незадължително)</label>
+              <input type="tel" id="fphone" name="phone" placeholder="+359 888 123 456" />
+            </div>
+            <div class="form-group">
+              <label for="fweapon" data-i18n="fWeapon">Интересувате се от</label>
+              <select id="fweapon" name="weapon">
+                <option value="" data-i18n="fWeaponDefault">— Изберете оръжие —</option>
+                <option value="foil" data-i18n="foilName">Флорет</option>
+                <option value="epee" data-i18n="epeeName">Шпага</option>
+                <option value="sabre" data-i18n="sabreName">Сабя</option>
+                <option value="unsure" data-i18n="fWeaponUnsure">Не съм сигурен/а</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="fmessage" data-i18n="fMessage">Съобщение (незадължително)</label>
+              <textarea id="fmessage" name="message" rows="3" data-i18n-placeholder="fMessagePh" placeholder="Кажете ни нещо за себе си..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-full">
+              <span class="btn-text" data-i18n="fSubmit">Изпратете заявка</span>
+              <span class="btn-arrow">→</span>
+            </button>
+            <div class="form-success" id="formSuccess" data-i18n="fSuccess">
+              ✓ Получихме вашата заявка! Ще се свържем с вас скоро.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <p class="footer-logo">КОРСАР</p>
+          <p class="footer-tagline" data-i18n="heroSub">Острие. Движение. Победа.</p>
+        </div>
+        <nav class="footer-nav">
+          <h4 data-i18n="footerNav">Навигация</h4>
+          <ul>
+            <li><a href="#about" data-i18n="navAbout">За нас</a></li>
+            <li><a href="#disciplines" data-i18n="navDisciplines">Дисциплини</a></li>
+            <li><a href="#coaches" data-i18n="navCoaches">Треньори</a></li>
+            <li><a href="#schedule" data-i18n="navSchedule">Програма</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-nav">
+          <h4 data-i18n="footerInfo">Информация</h4>
+          <ul>
+            <li><a href="#contact" data-i18n="navContact">Контакти</a></li>
+            <li><a href="#gallery" data-i18n="navGallery">Галерия</a></li>
+            <li><a href="#" data-i18n="footerPrivacy">Политика за поверителност</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footerCopy">© 2025 Фехтовален клуб „Корсар". Всички права запазени.</p>
+        <p data-i18n="footerMember">Член на <a href="https://www.bfencing.bg" target="_blank" rel="noopener">Български фехтовален съюз</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
